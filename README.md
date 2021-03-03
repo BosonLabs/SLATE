@@ -1,1 +1,1 @@
-# SLATE - Presale contract
+# SLATE 
