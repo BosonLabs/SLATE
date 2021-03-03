@@ -1,1 +1,1 @@
-# eBNB-TokenSwap
+# SLATE - Presale contract
