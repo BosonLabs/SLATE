@@ -81,10 +81,10 @@ Role:solidity Developer-boson labs
 date:23-FEB-2020
 reviewed by:hemadri -project director-Boson Labs */
 
-contract RobinPresale is Owned {
+contract Slate is Owned {
     using SafeMath for uint256;
     
-    bool public isPresaleOpen;
+    bool public isSlateOpen;
     
     //@dev ERC20 token address and decimals
     address public tokenAddress;
@@ -106,23 +106,23 @@ contract RobinPresale is Owned {
         owner = msg.sender;
     }
     /*
-     start the presale for usersInvestments 
+     start the slate for usersInvestments 
      */
      
-    function startPresale() external onlyOwner{
-        require(!isPresaleOpen, "Presale is open");
+    function startSlate() external onlyOwner{
+        require(!isSlateOpen, "Slate is open");
         
-        isPresaleOpen = true;
+        isSlateOpen = true;
     }
     
     /*
-    close the presale contract after usersInvestments to be ended
+    close the slate contract after usersInvestments to be ended
     */
     
-    function closePrsale() external onlyOwner{
-        require(isPresaleOpen, "Presale is not open yet.");
+    function closeSlate() external onlyOwner{
+        require(isSlateOpen, "Slate is not open yet.");
         
-        isPresaleOpen = false;
+        isSlateOpen = false;
     }
     
     /*
@@ -162,7 +162,7 @@ contract RobinPresale is Owned {
     */
     
     function receive() external payable{
-        require(isPresaleOpen, "Presale is not open.");
+        require(isSlateOpen, "Slate is not open.");
        require(
                 usersInvestments[msg.sender].add(msg.value) <= maxEthLimit
                 && usersInvestments[msg.sender].add(msg.value) >= minEthLimit,
@@ -173,7 +173,7 @@ contract RobinPresale is Owned {
         //@dev calculate the amount of tokens to transfer for the given eth
         uint256 tokenAmount = getTokensPerEth(msg.value);
         
-        require(IToken(tokenAddress).transfer(msg.sender, tokenAmount), "Insufficient balance of presale contract!");
+        require(IToken(tokenAddress).transfer(msg.sender, tokenAmount), "Insufficient balance of slate contract!");
         
         usersInvestments[msg.sender] = usersInvestments[msg.sender].add(msg.value);
         
@@ -188,22 +188,22 @@ contract RobinPresale is Owned {
     }
     
     /*
-    After presale is closed ,the unsold tokens can be burned.
+    After slate is closed ,the unsold tokens can be burned.
     */
     
     function burnUnsoldTokens() external onlyOwner {
-        require(!isPresaleOpen, "You cannot burn tokens untitl the presale is closed.");
+        require(!isSlateOpen, "You cannot burn tokens untitl the slate is closed.");
         
         IToken(tokenAddress).burnTokens(IToken(tokenAddress).balanceOf(address(this)));   
     }
     
     /*
-    After presale is closed the owner can transfer the unsold to the 
+    After slate is closed the owner can transfer the unsold to the 
     token owner address by getUnsoldTokens.
     */
     
     function getUnsoldTokens() external onlyOwner {
-        require(!isPresaleOpen, "You cannot get tokens until the presale is closed.");
+        require(!isSlateOpen, "You cannot get tokens until the slate is closed.");
         
         IToken(tokenAddress).transfer(owner, IToken(tokenAddress).balanceOf(address(this)) );
     }
