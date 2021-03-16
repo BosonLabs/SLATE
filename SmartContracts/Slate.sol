@@ -81,10 +81,10 @@ Role:solidity Developer-boson labs
 date:23-FEB-2020
 reviewed by:hemadri -project director-Boson Labs */
 
-contract Slate is Owned {
+contract SlatePresale is Owned {
     using SafeMath for uint256;
     
-    bool public isSlateOpen;
+    bool public isSlatePresaleOpen;
     
     //@dev ERC20 token address and decimals
     address public tokenAddress;
@@ -106,23 +106,23 @@ contract Slate is Owned {
         owner = msg.sender;
     }
     /*
-     start the slate for usersInvestments 
+     start the slatepresale for usersInvestments 
      */
      
-    function startSlate() external onlyOwner{
-        require(!isSlateOpen, "Slate is open");
+    function startSlatePresale() external onlyOwner{
+        require(!isSlatePresaleOpen, "SlatePresale is open");
         
-        isSlateOpen = true;
+        isSlatePresaleOpen = true;
     }
     
     /*
-    close the slate contract after usersInvestments to be ended
+    close the slatepresale contract after usersInvestments to be ended
     */
     
-    function closeSlate() external onlyOwner{
-        require(isSlateOpen, "Slate is not open yet.");
+    function closeSlatePresale() external onlyOwner{
+        require(isSlatePresaleOpen, "SlatePresale is not open yet.");
         
-        isSlateOpen = false;
+        isSlatePresaleOpen = false;
     }
     
     /*
@@ -162,7 +162,7 @@ contract Slate is Owned {
     */
     
     function receive() external payable{
-        require(isSlateOpen, "Slate is not open.");
+        require(isSlatePresaleOpen, "SlatePresale is not open.");
        require(
                 usersInvestments[msg.sender].add(msg.value) <= maxEthLimit
                 && usersInvestments[msg.sender].add(msg.value) >= minEthLimit,
@@ -173,7 +173,7 @@ contract Slate is Owned {
         //@dev calculate the amount of tokens to transfer for the given eth
         uint256 tokenAmount = getTokensPerEth(msg.value);
         
-        require(IToken(tokenAddress).transfer(msg.sender, tokenAmount), "Insufficient balance of slate contract!");
+        require(IToken(tokenAddress).transfer(msg.sender, tokenAmount), "Insufficient balance of slatepresale contract!");
         
         usersInvestments[msg.sender] = usersInvestments[msg.sender].add(msg.value);
         
@@ -188,22 +188,22 @@ contract Slate is Owned {
     }
     
     /*
-    After slate is closed ,the unsold tokens can be burned.
+    After slatepresale is closed ,the unsold tokens can be burned.
     */
     
     function burnUnsoldTokens() external onlyOwner {
-        require(!isSlateOpen, "You cannot burn tokens untitl the slate is closed.");
+        require(!isSlatePresaleOpen, "You cannot burn tokens untitl the slatepresale is closed.");
         
         IToken(tokenAddress).burnTokens(IToken(tokenAddress).balanceOf(address(this)));   
     }
     
     /*
-    After slate is closed the owner can transfer the unsold to the 
+    After slatepresale is closed the owner can transfer the unsold to the 
     token owner address by getUnsoldTokens.
     */
     
     function getUnsoldTokens() external onlyOwner {
-        require(!isSlateOpen, "You cannot get tokens until the slate is closed.");
+        require(!isSlatePresaleOpen, "You cannot get tokens until the slatepresale is closed.");
         
         IToken(tokenAddress).transfer(owner, IToken(tokenAddress).balanceOf(address(this)) );
     }
