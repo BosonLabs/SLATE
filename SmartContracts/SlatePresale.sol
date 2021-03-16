@@ -105,6 +105,7 @@ contract SlatePresale is Owned {
     constructor() public {
         owner = msg.sender;
     }
+    
     /*
      start the slatepresale for usersInvestments 
      */
