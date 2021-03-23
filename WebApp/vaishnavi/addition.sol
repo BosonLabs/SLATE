@@ -1,4 +1,4 @@
-//addition programs
+//addition programs in solidity
 pragma solidity ^0.5.0;
 contract SolidityTest 
 {
