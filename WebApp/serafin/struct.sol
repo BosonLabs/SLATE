@@ -1,4 +1,4 @@
-//struct simple program
+//struct program
 pragma solidity ^0.5.0;
 
 contract test {
