@@ -1,4 +1,4 @@
-//simple program for enum
+//program for enum
 pragma solidity ^0.5.0;
 
 contract test{
