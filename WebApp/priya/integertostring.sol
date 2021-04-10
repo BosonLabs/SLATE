@@ -1,5 +1,4 @@
-
-//program to return the result as the string
+//program to convert the integer format result to string format
 pragma solidity ^0.5.0;
 
 contract SolidityTest {   
@@ -31,6 +30,6 @@ contract SolidityTest {
          bstr[k--] = byte(uint8(48 + _i % 10));
          _i /= 10;
       }
-      return string(bstr);
+      return string(bstr);//access local variable
    }
 }
