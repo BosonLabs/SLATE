@@ -1,7 +1,12 @@
 pragma solidity ^0.7.6;
 
 contract Counter {
-    uint public count;
+    uint public count =10;
+
+    //Function to set the value
+    function set(unit i)public {
+count=i
+    }
 
     // Function to get the current count
     function get() public view returns (uint) {
