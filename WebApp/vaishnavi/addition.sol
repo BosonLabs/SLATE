@@ -9,6 +9,8 @@ contract SolidityTest
       uint a = 1;
       uint b = 2;
       uint result = a + b;
-      return result;//returns the result
+
+      return result;//returining the result
+
    }
 }
