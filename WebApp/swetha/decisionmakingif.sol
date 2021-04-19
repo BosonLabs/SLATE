@@ -7,9 +7,15 @@ contract SolidityTest {
       storedData = 10;   
    }
    function getResult() public view returns(uint){
+<<<<<<< decisionmakingif
+      uint a = 3; 
+      uint b = 3;
+      if(storedData==10){  //if statement
+=======
       uint a = 6; 
       uint b = 3;
       if(storedData==8){  //if statement
+>>>>>>> main
       uint result = a + b;
       return result;
       }
