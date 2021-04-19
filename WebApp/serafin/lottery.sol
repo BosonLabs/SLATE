@@ -1,4 +1,4 @@
-// solidity program for lottery
+// solidity simple program for lottery 
 pragma solidity ^0.4.21;
 
 contract Lottery {
