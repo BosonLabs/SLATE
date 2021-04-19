@@ -13,5 +13,6 @@ contract Updater {
       LedgerBalance ledgerBalance = new LedgerBalance();
       ledgerBalance.updateBalance(10);
       return ledgerBalance.balances(address(this));
-   }
-}
+     }
+ }    
+      
