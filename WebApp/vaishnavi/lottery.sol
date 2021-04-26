@@ -1,3 +1,4 @@
+//program to pick a winner in a Lottery
 pragma solidity ^0.4.21;
 
 contract Lottery {
@@ -8,6 +9,8 @@ contract Lottery {
     manager = msg.sender;
   }
 
+
+//function for the players enter into the lottery to pay greater than .01 ether
   function enter() public payable {
     require(msg.value > .01 ether);
 
@@ -26,6 +29,8 @@ contract Lottery {
     players = new address[](0);
   }
 
+
+//function to return the players
   function getPlayers() public view returns (address[]) {
     return players;
   }
