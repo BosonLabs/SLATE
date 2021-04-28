@@ -1,4 +1,4 @@
-  //campaign factory contract
+  //campaign Factory contract
 pragma solidity >=0.4;
 
 contract campaignFactory{
@@ -15,7 +15,7 @@ contract campaignFactory{
 }
 
 
-  //campaigns contract 
+  //campaigns contract
 contract campaign{
     struct Request{
         string description;
