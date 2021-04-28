@@ -1,3 +1,4 @@
+// program based on error concept
 pragma solidity ^0.7.6;
 
 contract Error {
