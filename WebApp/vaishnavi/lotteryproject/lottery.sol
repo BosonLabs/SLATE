@@ -30,7 +30,7 @@ pragma solidity ^0.4.17;
      
      modifier restricted(){
          require(msg.sender == manager);
-         _;
+         _; //manager
      }
      
      function getPlayers() public view returns(address[]){
