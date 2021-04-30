@@ -1,0 +1,215 @@
+{
+    "contractName": "lottery",
+    "abi": [
+      {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      }//
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/Program Files/lottery/contracts/lottery.sol\":\"lottery\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Program Files/lottery/contracts/lottery.sol\":{\"keccak256\":\"0x3164faa1bc5dc1dffa09b1186b65a08f2b76c9609523699e0d7dd50ef52f7ac5\",\"urls\":[\"bzz-raw://0dc41af90ca0871c7c48e4f10784e5f31c618b44b58bd12d14fef22785c55c3d\",\"dweb:/ipfs/QmfRoKGG29KwqTkG243rPMcbL7fijpwm932mEHqSae1q8y\"]}},\"version\":1}",
+    "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820e36eb754b01a27478ffbbea0f5c34af66ef3780490e6032412161ad3ef99384f64736f6c63430005100032",
+    "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820e36eb754b01a27478ffbbea0f5c34af66ef3780490e6032412161ad3ef99384f64736f6c63430005100032",
+    "sourceMap": "66:49:1:-;;;87:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;87:26:1;66:49;;;;;;",
+    "deployedSourceMap": "66:49:1:-;;;;;",
+    "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract lottery {\n  constructor() public {\n  }\n}\n",
+    "sourcePath": "D:/Program Files/lottery/contracts/lottery.sol",
+    "ast": {
+      "absolutePath": "/D/Program Files/lottery/contracts/lottery.sol",
+      "exportedSymbols": {
+        "lottery": [
+          39
+        ]
+      },
+      "id": 40,
+      "nodeType": "SourceUnit",
+      "nodes": [
+        {
+          "id": 34,
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ],
+          "nodeType": "PragmaDirective",
+          "src": "32:32:1"
+        },
+        {
+          "baseContracts": [],
+          "contractDependencies": [],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "id": 39,
+          "linearizedBaseContracts": [
+            39
+          ],
+          "name": "lottery",
+          "nodeType": "ContractDefinition",
+          "nodes": [
+            {
+              "body": {
+                "id": 37,
+                "nodeType": "Block",
+                "src": "108:5:1",
+                "statements": []
+              },
+              "documentation": null,
+              "id": 38,
+              "implemented": true,
+              "kind": "constructor",
+              "modifiers": [],
+              "name": "",
+              "nodeType": "FunctionDefinition",
+              "parameters": {
+                "id": 35,
+                "nodeType": "ParameterList",
+                "parameters": [],
+                "src": "98:2:1"
+              },
+              "returnParameters": {
+                "id": 36,
+                "nodeType": "ParameterList",
+                "parameters": [],
+                "src": "108:0:1"
+              },
+              "scope": 39,
+              "src": "87:26:1",
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            }
+          ],
+          "scope": 40,
+          "src": "66:49:1"
+        }
+      ],
+      "src": "32:84:1"
+    },
+    "legacyAST": {
+      "attributes": {
+        "absolutePath": "/D/Program Files/lottery/contracts/lottery.sol",
+        "exportedSymbols": {
+          "lottery": [
+            39
+          ]
+        }
+      },
+      "children": [
+        {
+          "attributes": {
+            "literals": [
+              "solidity",
+              ">=",
+              "0.4",
+              ".22",
+              "<",
+              "0.9",
+              ".0"
+            ]
+          },
+          "id": 34,
+          "name": "PragmaDirective",
+          "src": "32:32:1"
+        },
+        {
+          "attributes": {
+            "baseContracts": [
+              null
+            ],
+            "contractDependencies": [
+              null
+            ],
+            "contractKind": "contract",
+            "documentation": null,
+            "fullyImplemented": true,
+            "linearizedBaseContracts": [
+              39
+            ],
+            "name": "lottery",
+            "scope": 40
+          },
+          "children": [
+            {
+              "attributes": {
+                "documentation": null,
+                "implemented": true,
+                "isConstructor": true,
+                "kind": "constructor",
+                "modifiers": [
+                  null
+                ],
+                "name": "",
+                "scope": 39,
+                "stateMutability": "nonpayable",
+                "superFunction": null,
+                "visibility": "public"
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "parameters": [
+                      null
+                    ]
+                  },
+                  "children": [],
+                  "id": 35,
+                  "name": "ParameterList",
+                  "src": "98:2:1"
+                },
+                {
+                  "attributes": {
+                    "parameters": [
+                      null
+                    ]
+                  },
+                  "children": [],
+                  "id": 36,
+                  "name": "ParameterList",
+                  "src": "108:0:1"
+                },
+                {
+                  "attributes": {
+                    "statements": [
+                      null
+                    ]
+                  },
+                  "children": [],
+                  "id": 37,
+                  "name": "Block",
+                  "src": "108:5:1"
+                }
+              ],
+              "id": 38,
+              "name": "FunctionDefinition",
+              "src": "87:26:1"
+            }
+          ],
+          "id": 39,
+          "name": "ContractDefinition",
+          "src": "66:49:1"
+        }
+      ],
+      "id": 40,
+      "name": "SourceUnit",
+      "src": "32:84:1"
+    },
+    "compiler": {
+      "name": "solc",
+      "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    },
+    "networks": {},
+    "schemaVersion": "3.4.0",
+    "updatedAt": "2021-04-30T06:27:33.421Z",
+    "devdoc": {
+      "methods": {}
+    },
+    "userdoc": {
+      "methods": {}
+    }//
+  }
