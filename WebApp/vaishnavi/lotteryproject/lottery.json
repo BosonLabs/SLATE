@@ -6,7 +6,7 @@
         "payable": false,
         "stateMutability": "nonpayable",
         "type": "constructor"
-      }//
+      }
     ],
     "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/Program Files/lottery/contracts/lottery.sol\":\"lottery\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Program Files/lottery/contracts/lottery.sol\":{\"keccak256\":\"0x3164faa1bc5dc1dffa09b1186b65a08f2b76c9609523699e0d7dd50ef52f7ac5\",\"urls\":[\"bzz-raw://0dc41af90ca0871c7c48e4f10784e5f31c618b44b58bd12d14fef22785c55c3d\",\"dweb:/ipfs/QmfRoKGG29KwqTkG243rPMcbL7fijpwm932mEHqSae1q8y\"]}},\"version\":1}",
     "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820e36eb754b01a27478ffbbea0f5c34af66ef3780490e6032412161ad3ef99384f64736f6c63430005100032",
@@ -211,5 +211,5 @@
     },
     "userdoc": {
       "methods": {}
-    }//
+    }
   }
