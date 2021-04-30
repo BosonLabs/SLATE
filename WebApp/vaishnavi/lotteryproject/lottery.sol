@@ -34,6 +34,6 @@ pragma solidity ^0.4.17;
      }
      
      function getPlayers() public view returns(address[]){
-         return players;
+         return players;//playes
      } 
  }
