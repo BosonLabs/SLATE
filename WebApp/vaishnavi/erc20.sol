@@ -46,7 +46,7 @@ contract CodeWithvaishnavi is ERC20Interface, SafeMath {
     mapping(address => uint) balances;
     mapping(address => mapping(address => uint)) allowed;
 
-    //contract function Initializes contract with initial supply tokens to the creator of the contract
+    //contract function that Initializes contract with initial supply tokens to the creator of the contract
     
     constructor() public {
         name = "CodeWithvaishnavi";
