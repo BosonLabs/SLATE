@@ -46,13 +46,13 @@ contract CodeWithvaishnavi is ERC20Interface, SafeMath {
     mapping(address => uint) balances;
     mapping(address => mapping(address => uint)) allowed;
 
-    //contract function that Initializes contract with initial supply tokens to the creator of the contract
+    //contract function that Initializes contract with initial supply tokens to the creator of the contract 
     
     constructor() public {
         name = "CodeWithvaishnavi";
         symbol = "CWV";
         decimals = 18;
-        _totalSupply = 1000000;
+        _totalSupply = 1000000000000000000000000;//18 decimals
 
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
