@@ -1,4 +1,4 @@
-//program to pick a winner in a Lottery
+//program to pick a winner in a lottery
 pragma solidity ^0.4.21;
 
 contract Lottery {
