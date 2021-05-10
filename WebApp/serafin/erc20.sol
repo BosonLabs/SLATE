@@ -16,8 +16,7 @@ contract ERC20Interface {
 }
 
 
-
-// SafeMath Library
+// Safe Math Library
 
 contract SafeMath {
     function safeAdd(uint a, uint b) public pure returns (uint c) {
@@ -25,10 +24,7 @@ contract SafeMath {
         require(c >= a);
     }
     function safeSub(uint a, uint b) public pure returns (uint c) {
-
-        require(b <= a); 
-        c = a - b;
-
+        require(b <= a); c = a - b;
         }
     function safeMul(uint a, uint b) public pure returns (uint c) { 
         c = a * b; require(a == 0 || c / a == b);
@@ -40,7 +36,7 @@ contract SafeMath {
 }
 
 
-contract CodeWithvaishnavi is ERC20Interface, SafeMath {
+contract CodeWithserafin is ERC20Interface, SafeMath {
     string public name;
     string public symbol;
     uint8 public decimals; 
@@ -50,17 +46,13 @@ contract CodeWithvaishnavi is ERC20Interface, SafeMath {
     mapping(address => uint) balances;
     mapping(address => mapping(address => uint)) allowed;
 
-
     //contract function that Initializes contract with initial supply tokens to the creator of the contract
 
-    
     constructor() public {
-        name = "CodeWithvaishnavi";
-        symbol = "CWV";
+        name = "CodeWithserafin";
+        symbol = "CWS";
         decimals = 18;
-
-        _totalSupply = 1000000000000000000000000;//18 decimals
-
+        _totalSupply = 1000000;
 
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
@@ -98,4 +90,4 @@ contract CodeWithvaishnavi is ERC20Interface, SafeMath {
         emit Transfer(from, to, tokens);
         return true;
     }
-}
+} 
