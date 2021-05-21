@@ -15,6 +15,7 @@ contract ScopingErrors {
             uint same1 = 0;// Illegal, second declaration of same1
         }
     }
+    
 
     function minimalScoping() public {
         {
